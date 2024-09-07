@@ -16,15 +16,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#252A34', // Background color for a modern look
     padding: Platform.select({
-      ios: 30,
-      android: 20,
+      ios: 20,
+      android: 10,
     }),
   },
   text: {
-    fontSize: 22,
-    fontWeight: '600',
-    color: '#FF2E63', // Modern accent color
+    fontSize: 20,
     textAlign: 'center',
+    color: Platform.select({
+      ios: '#EAEAEA',
+      android: '#FF2E63',
+    }),
   },
 });
 
