@@ -12,6 +12,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons'; // Use Expo icons or any other icon library
+import * as ScreenOrientation from 'expo-screen-orientation';
+import { Platform } from 'react-native';  
+
+
 
 const Stack = createNativeStackNavigator();
 const projects = [
@@ -36,7 +40,9 @@ function Home({ navigation }: { navigation: any }) {
       <Text style={styles.cardText}>{item.title}</Text>
     </TouchableOpacity>
   );
-
+  if (Platform.OS) {
+    ScreenOrientation.unlockAsync();
+  }
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
@@ -55,7 +61,7 @@ function Home({ navigation }: { navigation: any }) {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Home" >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Section1" component={Section1} />
         <Stack.Screen name="Section2" component={Section2} />
@@ -108,3 +114,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
