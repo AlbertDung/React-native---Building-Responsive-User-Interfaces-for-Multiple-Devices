@@ -18,7 +18,7 @@ const projects = [
   { name: 'Section1', title: 'Dynamic Width & Dimensions API', icon: 'expand' },
   { name: 'Section2', title: 'Resizing Images', icon: 'image' },
   { name: 'Section3', title: 'Screen Orientation Changes', icon: 'phone-portrait' },
-  { name: 'Section4', title: 'KeyboardAvoidingView', icon: 'keyboard' },
+  { name: 'Section4', title: 'KeyboardAvoidingView', icon: 'key' },
   { name: 'Section5', title: 'Landscape', icon: 'tablet-landscape' },
   { name: 'Section6', title: 'Platform-Specific Code', icon: 'code-slash' },
   { name: 'Section7', title: 'Status Bar', icon: 'stats-chart' },
