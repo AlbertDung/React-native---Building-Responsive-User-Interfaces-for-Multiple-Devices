@@ -61,7 +61,7 @@ function Home({ navigation }: { navigation: any }) {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" >
+      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Section1" component={Section1} />
         <Stack.Screen name="Section2" component={Section2} />
@@ -114,4 +114,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
